@@ -1,35 +1,51 @@
 import React from "react";
 import { ArrowDown } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
+  const ease = [0.22, 1, 0.36, 1];
+
   return (
-    <section className="h-screen mt-10 flex flex-col justify-center items-center text-center bg-black ">
+    <section className="h-[45vh] md:h-screen flex flex-col justify-center md:mt-20 items-center text-center bg-black px-4 md:translate-y-0">
       {/* Heading */}
-      <h1
-        className="text-5xl md:text-9xl font-light mb-6"
-        style={{ color: "#ceba9e" }}
+      <motion.h1
+        initial={{ opacity: 0, y: 70, scale: 0.9, filter: "blur(8px)" }}
+        whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+        viewport={{ once: false, amount: 0.6 }}
+        transition={{ duration: 1.8, ease }}
+        className="text-5xl md:text-9xl font-light mb-3 md:mb-6 text-[#ceba9e]"
       >
         Web Designer <span className="block">& Developer</span>
-      </h1>
+      </motion.h1>
 
       {/* Subtext */}
-      <p
-        className="text-lg md:text-xl font-light mb-12"
-        style={{ color: "#ceba9e" }}
+      <motion.p
+        initial={{ opacity: 0, y: 50, scale: 0.95, filter: "blur(6px)" }}
+        whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+        viewport={{ once: false, amount: 0.6 }}
+        transition={{ duration: 1.8, delay: 0.3, ease }}
+        className="text-lg md:text-xl font-light mb-4 md:mb-12 max-w-xl text-[#ceba9e]"
       >
         Premium Web Design, Development, and SEO services to help your business
         stand out.
-      </p>
+      </motion.p>
 
-      {/* Services arrow with border */}
-      <div className="flex flex-col items-center gap-2">
+      {/* Arrow */}
+      <motion.div
+        initial={{ opacity: 0, y: 40, scale: 0.9 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: false, amount: 0.6 }}
+        transition={{ duration: 1.6, delay: 0.6, ease }}
+        className="flex flex-col items-center gap-2"
+      >
         <div className="p-3 rounded-full border-2 border-[#ceba9e] bg-transparent">
-          <ArrowDown className=" w-6 h-6 text-[#ceba9e]" />
+          <ArrowDown className="w-6 h-6 text-[#ceba9e]" />
         </div>
+
         <span className="uppercase tracking-wider font-semibold text-[#ceba9e]">
           Services
         </span>
-      </div>
+      </motion.div>
     </section>
   );
 }
