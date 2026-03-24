@@ -82,14 +82,17 @@ const Services = () => {
 
         {/* Arrow */}
         <motion.div
+          initial={{ opacity: 0, y: 40, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: false, amount: 0.6 }}
+          transition={{ duration: 1.6, delay: 0.6, ease }}
           className="flex flex-col items-center gap-2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.2 }}
         >
-          <div className="p-3 rounded-full border-2 border-[#ceba9e]">
-            <FaArrowDown className="w-6 h-6 text-[#ceba9e]" />
+          <div className="p-3 rounded-full border-2 border-[#ceba9e] bg-transparent">
+            <FaArrowDown className="w-4 h-4 text-[#ceba9e]" />
           </div>
-          <span className="uppercase tracking-wider text-[#ceba9e]">
+
+          <span className="uppercase tracking-wider font-semibold text-[#ceba9e]">
             Services
           </span>
         </motion.div>

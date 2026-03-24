@@ -39,7 +39,7 @@ export default function Hero() {
         className="flex flex-col items-center gap-2"
       >
         <div className="p-3 rounded-full border-2 border-[#ceba9e] bg-transparent">
-          <ArrowDown className="w-6 h-6 text-[#ceba9e]" />
+          <ArrowDown className="w-4 h-4 text-[#ceba9e]" />
         </div>
 
         <span className="uppercase tracking-wider font-semibold text-[#ceba9e]">
