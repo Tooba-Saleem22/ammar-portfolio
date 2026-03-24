@@ -18,7 +18,7 @@ const Footer = () => {
         <div>
           <h3 className="text-2xl font-light mb-1">Ammar Awan</h3>
           <p className="text-sm font-light text-[#ceba9e]/80 break-all">
-            ammarawan@example.com
+            ammarawan0098@gmail.com
           </p>
         </div>
 
