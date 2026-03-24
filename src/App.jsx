@@ -10,10 +10,15 @@ import WorkPage from "./pages/WorkPage";
 import ContactPage from "./pages/ContactPage";
 import Services from "./pages/Services";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 function App() {
   return (
     <Router>
-      {/* Navbar fixed */}
+      {/* ✅ Scroll reset on route change */}
+      <ScrollToTop />
+
+      {/* Navbar */}
       <Navbar />
 
       {/* Main content */}
@@ -24,7 +29,8 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/work" element={<WorkPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          {/* Optional fallback for invalid route */}
+
+          {/* Fallback */}
           <Route
             path="*"
             element={<div className="text-center p-10">Page Not Found</div>}
