@@ -18,7 +18,7 @@ const Home = () => {
   const ease = [0.22, 1, 0.36, 1];
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-white text-black">
       {/* Hero Section */}
       <div className="h-screen flex flex-col items-center justify-start">
         <Hero />
@@ -39,9 +39,9 @@ const Home = () => {
             {services.concat(services).map((service, index) => (
               <div
                 key={index}
-                className="flex items-center space-x-4 text-[#ceba9e] text-xl px-4 py-2"
+                className="flex items-center space-x-4 text-black text-xl px-4 py-2"
               >
-                {React.cloneElement(service.icon, { color: "#ceba9e" })}
+                {React.cloneElement(service.icon, { color: "black" })}
                 <span>{service.name}</span>
               </div>
             ))}
@@ -84,15 +84,15 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 1.5, delay: idx * 0.2, ease }}
-            className="bg-[#ceba9e]/10 p-6 max-w-xs h-60 flex flex-col justify-start hover:scale-105 transition-transform duration-300"
+            className="bg-black/10 p-6 max-w-xs h-60 flex flex-col justify-start hover:scale-105 transition-transform duration-300"
           >
-            <span className="text-[#ceba9e] font-light text-lg mb-1">
+            <span className="text-black font-light text-lg mb-1">
               [{item.id}]
             </span>
-            <h3 className="text-[#ceba9e] text-3xl font-light mb-2 text-left">
+            <h3 className="text-black text-3xl font-light mb-2 text-left">
               {item.title}
             </h3>
-            <p className="text-[#ceba9e] font-light text-lg text-left">
+            <p className="text-black font-light text-lg text-left">
               {item.desc}
             </p>
           </motion.div>
@@ -107,7 +107,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: false, amount: 0.6 }}
             transition={{ duration: 1.5, ease }}
-            className="text-7xl font-light mb-2 text-[#ceba9e]"
+            className="text-7xl font-light mb-2 text-black"
           >
             Our Projects
           </motion.h2>
@@ -116,7 +116,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.6 }}
             transition={{ duration: 1.5, delay: 0.2, ease }}
-            className="text-xl font-light text-[#ceba9e]/80"
+            className="text-xl font-light text-black/80"
           >
             Some of our recent work
           </motion.h3>
@@ -142,7 +142,7 @@ const Home = () => {
                   className="w-full h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <p className="text-[#ceba9e] font-light mt-2 text-left text-lg">
+              <p className="text-black font-light mt-2 text-left text-lg">
                 Project {idx + 1}
               </p>
             </motion.a>
@@ -152,15 +152,15 @@ const Home = () => {
 
       {/* Timeline Section */}
       <div className="w-full py-16 px-4 max-w-6xl mx-auto relative">
-        <h2 className="text-[#ceba9e] text-6xl md:text-7xl font-light mb-4 text-center">
+        <h2 className="text-black text-6xl md:text-7xl font-light mb-4 text-center">
           The Process
         </h2>
-        <p className="text-[#ceba9e] text-base text-center md:text-lg max-w-2xl mx-auto mb-16 font-light">
+        <p className="text-black text-base text-center md:text-lg max-w-2xl mx-auto mb-16 font-light">
           A structured approach focused on delivering impactful results through
           design, strategy, and execution tailored to your business goals.
         </p>
 
-        <div className="absolute md:left-1/2 left-6 transform -translate-x-1/2 md:h-[95%] h-[calc(100%-2rem)] border-l border-[#ceba9e]/40"></div>
+        <div className="absolute md:left-1/2 left-6 transform -translate-x-1/2 md:h-[95%] h-[calc(100%-2rem)] border-l border-black/40"></div>
 
         <div className="relative space-y-10">
           {[
@@ -203,16 +203,16 @@ const Home = () => {
               transition={{ duration: 1.5, delay: idx * 0.2, ease }}
               className={`flex flex-col md:flex-row relative ${item.side === "right" ? "md:justify-end" : "md:justify-start"}`}
             >
-              <span className="absolute md:left-1/2 left-6 transform -translate-x-1/2 bg-black text-[#ceba9e] font-light w-9 h-9 flex items-center justify-center border border-[#ceba9e] z-10 top-[5%]">
+              <span className="absolute md:left-1/2 left-6 transform -translate-x-1/2 bg-white text-black font-light w-9 h-9 flex items-center justify-center border border-black z-10 top-[5%]">
                 {item.num}
               </span>
               <div
-                className={`bg-[#ceba9e]/10 p-5 md:mt-5 mt-7 md:p-10 w-[80%] md:w-auto md:max-w-lg hover:scale-105 transition rounded-none ${item.side === "right" ? "md:ml-10 ml-[14%]" : item.num === "02" || item.num === "04" ? "md:mr-16 md:ml-[0%] ml-[13%]" : "md:mr-10 ml-[14%]"}`}
+                className={`bg-black/10 p-5 md:mt-5 mt-7 md:p-10 w-[80%] md:w-auto md:max-w-lg hover:scale-105 transition rounded-none ${item.side === "right" ? "md:ml-10 ml-[14%]" : item.num === "02" || item.num === "04" ? "md:mr-16 md:ml-[0%] ml-[13%]" : "md:mr-10 ml-[14%]"}`}
               >
-                <h3 className="text-[#ceba9e] text-2xl md:text-3xl font-light mb-3">
+                <h3 className="text-black text-2xl md:text-3xl font-light mb-3">
                   {item.title}
                 </h3>
-                <p className="text-[#ceba9e] text-base md:text-lg font-light">
+                <p className="text-black text-base md:text-lg font-light">
                   {item.desc}
                 </p>
               </div>
