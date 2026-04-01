@@ -6,7 +6,7 @@ import CTA from "../components/CTA";
 
 const WorkPage = () => {
   return (
-    <div className="bg-black text-white flex flex-col items-center">
+    <div className="bg-white text-black flex flex-col items-center">
       {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 40, scale: 0.95 }}
@@ -14,10 +14,10 @@ const WorkPage = () => {
         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
         className="text-center px-4 mt-8 md:mt-16"
       >
-        <h1 className="text-5xl md:text-9xl font-light mb-3 md:mb-6 text-[#ceba9e]">
+        <h1 className="text-5xl md:text-9xl font-light mb-3 md:mb-6 text-black">
           Work
         </h1>
-        <p className="text-base md:text-xl text-[#ceba9e]/80 mb-8 max-w-2xl mx-auto">
+        <p className="text-base md:text-xl text-black/80 mb-8 max-w-2xl mx-auto">
           My latest web design projects and see how we can
           <br /> help bring your ideas to life.
         </p>
@@ -30,10 +30,10 @@ const WorkPage = () => {
           transition={{ duration: 1.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col items-center gap-2"
         >
-          <div className="p-3 rounded-full border-2 border-[#ceba9e] bg-transparent">
-            <FaArrowDown className="w-4 h-4 text-[#ceba9e]" />
+          <div className="p-3 rounded-full border-2 border-black bg-transparent">
+            <FaArrowDown className="w-4 h-4 text-black" />
           </div>
-          <span className="uppercase tracking-wider font-light text-[#ceba9e]">
+          <span className="uppercase tracking-wider font-light text-black">
             Work
           </span>
         </motion.div>
@@ -65,7 +65,7 @@ const WorkPage = () => {
                   className="w-full h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <p className="text-[#ceba9e] font-light mt-2 text-left text-lg">
+              <p className="text-black font-light mt-2 text-left text-lg">
                 Project {idx + 1}
               </p>
             </motion.a>

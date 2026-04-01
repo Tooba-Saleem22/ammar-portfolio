@@ -64,7 +64,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col items-center">
+    <div className="bg-white text-black min-h-screen flex flex-col items-center">
       {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 40, scale: 0.95 }}
@@ -72,11 +72,11 @@ const Services = () => {
         transition={{ duration: 1.5, ease }}
         className="text-center px-4"
       >
-        <h1 className="text-5xl md:mt-16 mt-8 md:text-9xl font-light mb-3 md:mb-6 text-[#ceba9e]">
+        <h1 className="text-5xl md:mt-16 mt-8 md:text-9xl font-light mb-3 md:mb-6 text-black">
           Web Design <br />& Framer
         </h1>
 
-        <p className="text-base md:text-xl text-[#ceba9e]/80 mb-8">
+        <p className="text-base md:text-xl text-black/80 mb-8">
           Services to help your business stand out.
         </p>
 
@@ -88,11 +88,11 @@ const Services = () => {
           transition={{ duration: 1.6, delay: 0.6, ease }}
           className="flex flex-col items-center gap-2"
         >
-          <div className="p-3 rounded-full border-2 border-[#ceba9e] bg-transparent">
-            <FaArrowDown className="w-4 h-4 text-[#ceba9e]" />
+          <div className="p-3 rounded-full border-2 border-black bg-transparent">
+            <FaArrowDown className="w-4 h-4 text-black" />
           </div>
 
-          <span className="uppercase tracking-wider font-semibold text-[#ceba9e]">
+          <span className="uppercase tracking-wider font-semibold text-black">
             Services
           </span>
         </motion.div>
@@ -114,7 +114,7 @@ const Services = () => {
       </motion.div>
 
       {/* Counters */}
-      <div className="w-full py-10 md:py-16 flex flex-wrap justify-center gap-10 md:gap-20 text-[#ceba9e]">
+      <div className="w-full py-10 md:py-16 flex flex-wrap justify-center gap-10 md:gap-20 text-black">
         {[
           { label: "Clients", value: "150+" },
           { label: "Projects", value: "300+" },
@@ -141,26 +141,26 @@ const Services = () => {
       {servicesData.map((service, idx) => (
         <div key={idx} className="w-full flex justify-center px-4 md:px-0 py-4">
           <div
-            className="bg-[#181716] border border-[#ceba9e] p-4 md:p-6 max-w-2xl w-full rounded-md 
+            className="bg-white border border-black p-4 md:p-6 max-w-2xl w-full rounded-md 
       transition-all duration-300 hover:scale-[1.02]"
           >
-            <h2 className="text-2xl text-[#ceba9e] mb-3">{service.title}</h2>
+            <h2 className="text-2xl text-black mb-3">{service.title}</h2>
 
-            {/* Image (compact) */}
+            {/* Image */}
             <div className="overflow-hidden rounded-md mb-3">
               <img
                 src={service.img}
                 alt={service.title}
-                className="w-full h-[180px] object-cover"
+                className="w-full h-[280px] md:h-[360px] object-cover"
               />
             </div>
 
-            <div className="space-y-3 text-[#ceba9e]/90">
+            <div className="space-y-3 text-black/90">
               {service.sections.map((sec, i) => (
                 <div key={i}>
                   <h3 className="text-base md:text-lg mb-1">{sec.heading}</h3>
                   <p className="text-sm">{sec.text}</p>
-                  <hr className="border-t border-[#ceba9e]/40 mt-2" />
+                  <hr className="border-t border-black/40 mt-2" />
                 </div>
               ))}
             </div>
