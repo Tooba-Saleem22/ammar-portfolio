@@ -22,7 +22,7 @@ function App() {
       <Navbar />
 
       {/* Main content */}
-      <div className="bg-black text-white min-h-screen pt-28">
+      <div className="bg-white text-white min-h-screen pt-28">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />

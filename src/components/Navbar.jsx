@@ -7,14 +7,14 @@ export default function Navbar() {
     <div className="w-full flex justify-center fixed top-4 md:top-6 z-50">
       <nav
         className="w-[95%] sm:w-[85%] md:w-[70%] backdrop-blur-md rounded-2xl px-3 sm:px-6 py-2 sm:py-3 flex items-center justify-between"
-        style={{ backgroundColor: "rgba(206, 186, 158, 0.2)" }}
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }} // Dark background
       >
         {/* Left Side */}
         <div className="flex items-center gap-2 sm:gap-4">
           <img
             src="fazool.jpeg"
             alt="profile"
-            className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover"
+            className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-white"
           />
 
           {/* Hidden on mobile */}
@@ -23,7 +23,7 @@ export default function Navbar() {
               Ammar Awan
             </span>
 
-            <div className="flex items-center text-[10px] sm:text-[13px] text-gray-100 gap-1">
+            <div className="flex items-center text-[10px] sm:text-[13px] text-gray-200 gap-1">
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full"></span>
               Available for work
             </div>
